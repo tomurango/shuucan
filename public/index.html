@@ -49,7 +49,7 @@
       
       <!--ログアウトボタン-->
       <br>
-      <button id="logout_button" class="mdc-button mdc-button--outlined" onclick="log_out()">
+      <button id="logout_button" style="display: none;" class="mdc-button mdc-button--outlined" onclick="log_out()">
         <div class="mdc-button__ripple"></div>
         <span class="mdc-button__label">ログアウト</span>
       </button>
@@ -58,7 +58,7 @@
     <header id="top_header" class="mdc-top-app-bar">
       <div class="mdc-top-app-bar__row">
         <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-          <button id="login_icon" style="display:none; background-color:#ffffff; height:32px; width:32px; padding:0px; overflow: hidden; border:none; border-radius: 50%;left: 6px; position:relative;"><img id="usericon" width="32" height="32" alt="Your Icon" onerror="this.src='/images/nanikaerror.jpg' "/></button>
+          <button id="login_icon" onclick="drawer_open()" style="display:none; background-color:#ffffff; height:32px; width:32px; padding:0px; overflow: hidden; border:none; border-radius: 50%;left: 6px; position:relative;"><img id="usericon" width="32" height="32" alt="Your Icon" onerror="this.src='/images/nanikaerror.jpg'" ></button>
           <!--
           <button id="login_button" class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="login" onclick="login_card_display()">account_circle</button>
           -->
@@ -76,6 +76,24 @@
         </section>
       </div>
     </header>
+
+    <aside class="mdc-drawer mdc-drawer--modal" style="top: 0px;">
+      <div class="mdc-drawer__header">
+          <h3 class="mdc-drawer__title">User</h3>
+          <h6 class="mdc-drawer__subtitle" id="user_name_in_drawer">name</h6>
+      </div>
+      <div class="mdc-drawer__content">
+        <nav class="mdc-list">
+          <a class="mdc-list-item" href="" aria-current="page" tabindex="0" onclick="log_out();drawer_open();return false;">
+            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">logout</i>
+            <span class="mdc-list-item__text">ログアウト</span>
+          </a>
+        </nav>
+      </div>
+    </aside>
+
+    <div class="mdc-drawer-scrim"></div>
+
     <main>
       <div id="non_user">
         <h1>ログインしてね</h1>

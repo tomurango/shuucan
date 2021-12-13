@@ -97,14 +97,19 @@ $(document).ready(function(){
     });
 });
 
+//mainタグ内の表示を変える
 function signedin_collect(userinfo){
     document.getElementById("non_user").style.display = "none";
     document.getElementById("yes_user").style.display = "block";
     signed_intab(userinfo);
+    //ログインカード内のボタンを表示する
+    document.getElementById("logout_button").style.display = "block";
 }
 
+//tabの見た目を変える
 function signed_intab(userinfo){
     document.getElementById("usericon").src = userinfo.photoURL;
     document.getElementById("login_icon").style.display = "block";
     document.getElementById("login_button").style.display = "none";
 }
+
