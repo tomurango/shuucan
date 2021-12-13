@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shuucan</title>
+    <!-- スマホ用アイコン -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/shuucan.jpg">
+    <!-- ファビコン -->
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/9.6.0/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.6.0/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/9.6.0/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/9.6.0/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/9.6.0/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/9.6.0/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/9.6.0/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/9.6.0/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/9.6.0/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/9.6.0/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+    <!--material cdn-->
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <!--material icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    
+    <link href="css/main.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="login_card_div" style="display: none; position: fixed; height: 100%; width: 100%; left: 0px; text-align: center;z-index: 5;top: 0px;background-color: #ffffff;">
+      <!--戻るボタン-->
+      <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" style="position: absolute; top: 0px;left: 0px" onclick="login_card_display_back()">clear</button>
+      <!--google login button-->
+      <img id="google_login" src="images/google_login_button/btn_google_signin_light_normal_web@2x.png" style="display: inline-block; width: 60%; max-width: 300px; margin-top: 100px;" onclick="google_click()">
+      
+      <!--div id="google_div" style="background-size: contain;background-repeat: no-repeat;background-position: center center;display: inline-block; width: 60%; max-width: 300px; margin-top: 100px;" onclick="google_click()"></div-->
+      
+      <!--ログアウトボタン-->
+      <br>
+      <button id="logout_button" class="mdc-button mdc-button--outlined" onclick="log_out()">
+        <div class="mdc-button__ripple"></div>
+        <span class="mdc-button__label">ログアウト</span>
+      </button>
+    </div>
+
+    <header id="top_header" class="mdc-top-app-bar">
+      <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+          <button id="login_icon" style="display:none; background-color:#ffffff; height:32px; width:32px; padding:0px; overflow: hidden; border:none; border-radius: 50%;left: 6px; position:relative;"><img id="usericon" width="32" height="32" alt="Your Icon" onerror="this.src='/images/nanikaerror.jpg' "/></button>
+          <!--
+          <button id="login_button" class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="login" onclick="login_card_display()">account_circle</button>
+          -->
+          <button id="login_button" class="mdc-button mdc-button--outlined" style="border-color: #ffffff; color: #ffffff;" onclick="login_card_display()">
+            <span class="mdc-button__ripple"></span>
+            <span class="mdc-button__label">ログイン</span>
+          </button>
+
+          <span class="mdc-top-app-bar__title">ワールド</span>
+          
+        </section>
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+          <button style="display: block" class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Options">more_vert</button>
+          <button style="display: none" class="material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Search">search</button>
+        </section>
+      </div>
+    </header>
+    <main>
+      <div id="non_user">
+        <h1>ログインしてね</h1>
+      </div>
+      <div id="yes_user" style="display: none;">
+        <h1>ログインしたよ</h1>
+      </div>
+    </main>
+    <div id="bottom_app_bar" class="mdc-tab-bar" role="tablist">
+      <div class="mdc-tab-scroller">
+        <div class="mdc-tab-scroller__scroll-area">
+          <div class="mdc-tab-scroller__scroll-content">
+            <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
+              <span class="mdc-tab__content">
+                <span id="bab_icon_world" class="mdc-tab__icon material-icons bab_icon using" aria-hidden="true">public</span>
+                <span id="bab_icon_world_text" class="footer_parts mdc-tab__text-label bab_icon using">ワールド</span>
+              </span>
+              <span class="mdc-tab-indicator mdc-tab-indicator--active onfooter">
+                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+              </span>
+              <span class="mdc-tab__ripple" hidden></span>
+            </button>
+          
+            <button class="mdc-tab" role="tab" aria-selected="false" tabindex="0">
+              <span class="mdc-tab__content">
+                <span id="bab_icon_danjon" class="mdc-tab__icon material-icons bab_icon" aria-hidden="true">rocket_launch</span>
+                <span id="bab_icon_danjon_text" class="footer_parts mdc-tab__text-label bab_icon">ダンジョン</span>
+              </span>
+              <span class="mdc-tab__ripple" hidden></span>
+              <span class="mdc-tab-indicator onfooter">
+                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+              </span>
+            </button>
+
+            <button class="mdc-tab" role="tab" aria-selected="false" tabindex="0">
+              <span class="mdc-tab__content">
+                <span id="bab_icon_set" class="mdc-tab__icon material-icons bab_icon" aria-hidden="true">memory</span>
+                <span id="bab_icon_set_text" class="footer_parts mdc-tab__text-label bab_icon">セッテイ</span>
+              </span>
+              <span class="mdc-tab__ripple" hidden></span>
+              <span class="mdc-tab-indicator onfooter">
+                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+
+  <!--javascript 読み込み-->
+  <script src="js/material.js"></script>
+  <script src="js/login.js"></script>
+</html>

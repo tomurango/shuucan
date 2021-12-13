@@ -1,0 +1,78 @@
+/*color
+gray main dark light
+757575
+494949
+a4a4a4
+
+yellow
+ffb300
+c68400
+ffe54c
+
+from
+https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=757575&secondary.color=FFB300
+*/
+
+#bottom_app_bar{
+    z-index: 3;
+    background-color: #ffffff;
+    width: 100vw;
+    position: fixed;
+    bottom: 0px;
+    padding: 0px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+    transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1) 0s;
+}.mdc-tab__content{
+    flex-direction: column;
+}.mdc-tab:not(.mdc-tab--stacked) .mdc-tab__icon+.mdc-tab__text-label{
+    padding: 0px;
+}.mdc-tab{
+    height: 50px;
+}.mdc-tab-indicator.onfooter{
+    display: none !important;
+}.mdc-tab--active .mdc-tab__icon{
+    color: #c68400 !important;
+}.mdc-tab__text-label{
+    font-size: 0.5em
+}.mdc-tab__icon{
+    color: #a4a4a4 !important;
+}
+
+html{
+    height: 100%;
+    width: 100%;
+    /*safari ios のバウンス？を止めるための施し*/
+    overflow: hidden;
+}body{
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #ffffff;
+    /*overflow: hidden; safari ios バウンス対策でauto にするが、そもそもhidden にしていた深い理由が不明なため要注意*/
+    /*変えたあと試したけど、結局変化ないんすけどだいじょぶっすかねぇ*/
+    overflow: auto;
+}:root{
+    --mdc-theme-primary: #757575;
+    --mdc-theme-secondary: #ffb300;
+    --mdc-theme-on-primary: #ffffff;
+}
+#top_header{
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+}
+
+
+/*なぜかうまく機能しない→（背景画像がそもそも表示されない）
+#google_div{
+    background-image: url("images/google_login_button/btn_google_signin_light_normal_web@2x.png");
+}#google_div:hover{
+    background-image: url("images/google_login_button/btn_google_signin_light_focus_web@2x.png");
+}#google_div:active{
+    background-image: url("images/google_login_button/btn_google_signin_light_pressed_web@2x.png");
+}#google_div::before {
+    display: block;
+    content: " ";
+    margin-top: 24.0837696335079%;
+}
+*/
