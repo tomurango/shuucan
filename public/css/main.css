@@ -63,16 +63,23 @@ html{
 }
 
 
-/*なぜかうまく機能しない→（背景画像がそもそも表示されない）
-#google_div{
-    background-image: url("images/google_login_button/btn_google_signin_light_normal_web@2x.png");
-}#google_div:hover{
-    background-image: url("images/google_login_button/btn_google_signin_light_focus_web@2x.png");
-}#google_div:active{
-    background-image: url("images/google_login_button/btn_google_signin_light_pressed_web@2x.png");
-}#google_div::before {
-    display: block;
-    content: " ";
-    margin-top: 24.0837696335079%;
+@media screen and (min-width:600px){
+    .second_page{
+        height: calc(100% - 114px);
+    }
+}@media screen and (max-width:599px){
+    .second_page{
+        height: calc(100% - 106px);
+    }
+}.second_page{
+    width: 100%;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    /* スクロールを滑らかにする */
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;    /* IE, Edge 対応 */
+    scrollbar-width: none;       /* Firefox 対応 */
+}.second_page::-webkit-scrollbar {  /* Chrome, Safari 対応 */
+    display:none;
 }
-*/
