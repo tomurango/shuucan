@@ -14,3 +14,6 @@ function drawer_open(){
 /* list on drawer */
 var list = new mdc.list.MDCList(document.querySelector('.mdc-list'));
 
+/* ripple for good button */
+/*const buttonRipple = new mdc.ripple.MDCRipple(document.querySelector('.good_diary'));*/
+//↑つかないのでやめた

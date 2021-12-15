@@ -64,14 +64,37 @@ html{
 
 
 @media screen and (min-width:600px){
-    .second_page{
-        height: calc(100% - 114px);
+    .top_level_page{
+        height: calc(100vh - 64px);
+    }#bottom_app_bar{
+        display: none;
+    }#login_icon{
+        display: none !important;
+    }#nav_pc{
+        display: flex;
+        position: fixed;
+        padding-left: 60px;
+        flex-direction: column;
+        top: 0px;
+    }#main_area{
+        left: 120px;
+        position: relative;
+        width: 500px;
+    }#top_header{
+        width: 500px;
+        position: relative;
+        left: 120px;
+        box-shadow: none;
     }
 }@media screen and (max-width:599px){
-    .second_page{
-        height: calc(100% - 106px);
+    .top_level_page{
+        height: calc(100vh - 106px);
+    }#bottom_app_bar{
+        display: block;
+    }#nav_pc{
+        display: none;
     }
-}.second_page{
+}.top_level_page{
     width: 100%;
     background-color: #ffffff;
     box-sizing: border-box;
@@ -80,6 +103,61 @@ html{
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: none;    /* IE, Edge 対応 */
     scrollbar-width: none;       /* Firefox 対応 */
-}.second_page::-webkit-scrollbar {  /* Chrome, Safari 対応 */
+}.top_level_page::-webkit-scrollbar {  /* Chrome, Safari 対応 */
     display:none;
+}
+
+
+/* world card */
+.diary-card{
+    border: solid 1px #eeeeee;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: fit-content;
+    width: 100%;
+}.header_erea{
+    height: 48px;
+    width: 100%;
+    position: relative;
+}.who_icon{
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}.whos_diary{
+    margin: 0px;
+    position: absolute;
+    top: 8px;
+    left: 48px;
+    font-size: 16px;
+    font-weight: 600;
+}.what_time{
+    margin: 0px;
+    position: absolute;
+    top: 28px;
+    left: 48px;
+    font-size: 10px;
+    color: #777777;
+}.content_erea{
+    width: 100%;
+    position: relative;
+    text-align: left;
+    /*padding: 0px 8px 8px 48px;*/
+}.content_diary{
+    font-size: 16px;
+    margin: 0px 8px 8px 48px;
+}.footer_area {
+    width: 100%;
+    position: relative;
+    text-align: right;
+    height: 48px;
+}.good_diary{
+    color: #777777;
+}
+
+#world_thread{
+    width: 100%;
 }

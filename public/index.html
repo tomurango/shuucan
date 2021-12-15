@@ -91,16 +91,121 @@
         </nav>
       </div>
     </aside>
-
     <div class="mdc-drawer-scrim"></div>
 
-    <main>
+    <!--pcの時だけ表示させる 左のnavigation-->
+    <aside id="nav_pc">
+      
+      <button style="background-color:#ffffff; height:48px; width:48px; padding:0px; overflow: hidden; border:none; border-radius: 50%; position:relative;"><img width="48" height="48" alt="Your Icon" src="images/shuucan.jpg" onerror="this.src='/images/nanikaerror.jpg'" ></button>
+      <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" style="top: 0px;right: 0px;">public</button>
+      <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" style="top: 0px;right: 0px;">rocket_launch</button>
+      <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" style="top: 0px;right: 0px;">memory</button>
+      <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" style="top: 0px;right: 0px;" onclick="log_out()">logout</button>
+      <!--
+      <div class="mdc-drawer__header">
+        <h3 class="mdc-drawer__title">User</h3>
+        <h6 class="mdc-drawer__subtitle" id="user_name_in_sider">name</h6>
+      </div>
+      <div class="mdc-drawer__content">
+        
+        <nav class="mdc-list">
+          <a class="mdc-list-item" href="" aria-current="page" tabindex="0" onclick="log_out();drawer_open();return false;">
+            <i class="material-icons mdc-list-item__graphic" aria-hidden="true">logout</i>
+            <span class="mdc-list-item__text">ログアウト</span>
+          </a>
+        </nav>
+      </div>
+      -->
+    </aside>
+
+    <main id="main_area">
       <div id="non_user">
         <h1>ログインしてね</h1>
       </div>
       <div id="yes_user" class="top_level_page" style="display: none;">
         <div id="world_page" class="second_page">
-          <h1>ワーるど</h1>
+          <div id="world_thread" class="on_scroll">
+            <!--骨組み-->
+            <div id="" class="diary-card">
+              <div class="header_erea">
+                <img class="who_icon" src="images/shuucan.jpg">
+                <p class="whos_diary">tomura</p>
+                <p class="what_time">2時間</p>
+              </div>
+              <div class="content_erea">
+                <p class="content_diary">論ブンブンハローYarukeeper</p>
+              </div>
+              <div class="footer_area">
+                <button class="material-icons mdc-icon-button good_diary" title="Good">thumb_up</button>
+              </div>
+            </div>
+            <div id="" class="diary-card">
+              <div class="header_erea">
+                <img class="who_icon" src="images/google_login_button/btn_google_signin_dark_focus_web@2x.png">
+                <p class="whos_diary">tanak</p>
+                <p class="what_time">3時間</p>
+              </div>
+              <div class="content_erea">
+                <p class="content_diary">あーそーめん</p>
+              </div>
+              <div class="footer_area">
+                <button class="material-icons mdc-icon-button good_diary" title="Good">thumb_up</button>
+              </div>
+            </div>
+            <div id="" class="diary-card">
+              <div class="header_erea">
+                <img class="who_icon" src="images/google_login_button/btn_google_signin_light_disabled_web@2x.png">
+                <p class="whos_diary">dddddaawek</p>
+                <p class="what_time">6時間</p>
+              </div>
+              <div class="content_erea">
+                <p class="content_diary">genshin impack</p>
+              </div>
+              <div class="footer_area">
+                <button class="material-icons mdc-icon-button good_diary" title="Good">thumb_up</button>
+              </div>
+            </div>
+            <div id="" class="diary-card">
+              <div class="header_erea">
+                <img class="who_icon" src="images/google_login_button/btn_google_signin_dark_focus_web@2x.png">
+                <p class="whos_diary">tanak</p>
+                <p class="what_time">12時間</p>
+              </div>
+              <div class="content_erea">
+                <p class="content_diary">画像載せれるようにしたいな</p>
+              </div>
+              <div class="footer_area">
+                <button class="material-icons mdc-icon-button good_diary" title="Good">thumb_up</button>
+              </div>
+            </div>
+            <div id="" class="diary-card">
+              <div class="header_erea">
+                <img class="who_icon" src="images/google_login_button/btn_google_signin_light_disabled_web@2x.png">
+                <p class="whos_diary">dddddaawek</p>
+                <p class="what_time">12日15日</p>
+              </div>
+              <div class="content_erea">
+                <p class="content_diary">草元素</p>
+              </div>
+              <div class="footer_area">
+                <button class="material-icons mdc-icon-button good_diary" title="Good">thumb_up</button>
+              </div>
+            </div>
+            <div id="" class="diary-card">
+              <div class="header_erea">
+                <img class="who_icon" src="images/shuucan.jpg">
+                <p class="whos_diary">tomura</p>
+                <p class="what_time">12月11日</p>
+              </div>
+              <div class="content_erea">
+                <p class="content_diary">ばおわ</p>
+              </div>
+              <div class="footer_area">
+                <button class="material-icons mdc-icon-button good_diary" title="Good">thumb_up</button>
+              </div>
+            </div>
+            <!--骨組み-->
+          </div>
         </div>
         <div id="danjon_page" class="second_page" style="display: none;">
           <h1>ダンジョン</h1>
