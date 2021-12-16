@@ -1,21 +1,34 @@
 //tab ページ切り替え
 tabBar.listen('MDCTabBar:activated',function(event){
     var index = event["detail"]["index"];
-    //console.log("index => ", index);
+    page_nav(index);
+});
+
+function page_nav(index){
     //一回全部を非表示にする
     var top_level_pages = document.getElementsByClassName('second_page');
     for (var i=0, len=top_level_pages.length|0; i<len; i=i+1|0) {
         top_level_pages[i].style.display = "none";
     }
+    //sidenavボタンをすべてdisactive
+    document.getElementById("side_world").classList.remove("active");
+    document.getElementById("side_danjon").classList.remove("active");
+    document.getElementById("side_set").classList.remove("active");
     //indexによって処理を分岐して記述する
     if(index==0){
         //ワールドページ表示
         document.getElementById("world_page").style.display = "flex";
+        //sideのactive
+        document.getElementById("side_world").classList.add("active");
     }else if(index==1){
         //ダンジョンページ表示
         document.getElementById("danjon_page").style.display = "flex";
+        //sideのactive
+        document.getElementById("side_danjon").classList.add("active");
     }else if(index==2){
         //セッテイページ表示
         document.getElementById("set_page").style.display = "flex";
+        //sideのactive
+        document.getElementById("side_set").classList.add("active");
     }
-});
+}

@@ -97,10 +97,10 @@
     <aside id="nav_pc">
       
       <button style="background-color:#ffffff; height:48px; width:48px; padding:0px; overflow: hidden; border:none; border-radius: 50%; position:relative;"><img width="48" height="48" alt="Your Icon" src="images/shuucan.jpg" onerror="this.src='/images/nanikaerror.jpg'" ></button>
-      <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" style="top: 0px;right: 0px;">public</button>
-      <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" style="top: 0px;right: 0px;">rocket_launch</button>
-      <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" style="top: 0px;right: 0px;">memory</button>
-      <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" style="top: 0px;right: 0px;" onclick="log_out()">logout</button>
+      <button onclick="page_nav(0)" id="side_world" class="side_nav active material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" style="top: 0px;right: 0px;">public</button>
+      <button onclick="page_nav(1)" id="side_danjon" class="side_nav material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" style="top: 0px;right: 0px;">rocket_launch</button>
+      <button onclick="page_nav(2)" id="side_set" class="side_nav material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" style="top: 0px;right: 0px;">memory</button>
+      <button onclick="log_out()" class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" style="top: 0px;right: 0px;">logout</button>
       <!--
       <div class="mdc-drawer__header">
         <h3 class="mdc-drawer__title">User</h3>

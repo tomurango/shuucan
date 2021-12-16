@@ -75,7 +75,7 @@ html{
         position: fixed;
         padding-left: 60px;
         flex-direction: column;
-        top: 0px;
+        top: 20px;
     }#main_area{
         left: 120px;
         position: relative;
@@ -116,6 +116,7 @@ html{
     position: relative;
     height: fit-content;
     width: 100%;
+    box-sizing: border-box;
 }.header_erea{
     height: 48px;
     width: 100%;
@@ -160,4 +161,10 @@ html{
 
 #world_thread{
     width: 100%;
+}
+
+.side_nav{
+    color: #a4a4a4;
+}.side_nav.active{
+    color: #ffb300;
 }
