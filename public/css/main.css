@@ -161,10 +161,48 @@ html{
 
 #world_thread{
     width: 100%;
+}#danjon_thread{
+    width: 100%;
 }
 
 .side_nav{
     color: #a4a4a4;
 }.side_nav.active{
     color: #ffb300;
+}
+
+.danjon-card{
+    margin:10px;
+    flex-direction: column;
+    display: flex;
+    position: relative;
+    height: fit-content;
+    /*width: 100%;*/
+    box-sizing: border-box;
+}.danjon_head{
+    height: 48px;
+    width: 100%;
+    position: relative;
+}.danjon_goal{
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    margin: 0px;
+    font-size: 16px;
+    font-weight: 600;
+}.danjon_num{
+    position: absolute;
+    top: 28px;
+    left: 8px;
+    margin: 0px;
+    font-size: 10px;
+    color: #777777;
+}.erea_danjon{
+    width: 100%;
+    position: relative;
+    text-align: left;
+    /*padding: 0px 8px 8px 48px;*/
+}.content_danjon{
+    font-size: 16px;
+    margin: 0px 8px 10px 8px;
 }
