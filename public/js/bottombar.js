@@ -13,6 +13,7 @@ function page_nav(index){
     //sidenavボタンをすべてdisactive
     document.getElementById("side_world").classList.remove("active");
     document.getElementById("side_danjon").classList.remove("active");
+    document.getElementById("side_premia").classList.remove("active");
     document.getElementById("side_set").classList.remove("active");
     //indexによって処理を分岐して記述する
     if(index==0){
@@ -26,6 +27,11 @@ function page_nav(index){
         //sideのactive
         document.getElementById("side_danjon").classList.add("active");
     }else if(index==2){
+        //プレミアページ表示
+        document.getElementById("premia_page").style.display = "flex";
+        //sideのactive
+        document.getElementById("side_premia").classList.add("active");
+    }else if(index==3){
         //セッテイページ表示
         document.getElementById("set_page").style.display = "flex";
         //sideのactive

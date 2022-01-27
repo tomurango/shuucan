@@ -98,8 +98,9 @@
       
       <button style="background-color:#ffffff; height:48px; width:48px; padding:0px; overflow: hidden; border:none; border-radius: 50%; position:relative;"><img width="48" height="48" alt="Your Icon" src="images/shuucan.jpg" onerror="this.src='/images/nanikaerror.jpg'" ></button>
       <button onclick="page_nav(0)" id="side_world" class="side_nav active material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" style="top: 0px;right: 0px;">public</button>
-      <button onclick="page_nav(1)" id="side_danjon" class="side_nav material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" style="top: 0px;right: 0px;">rocket_launch</button>
-      <button onclick="page_nav(2)" id="side_set" class="side_nav material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" style="top: 0px;right: 0px;">memory</button>
+      <button onclick="page_nav(1)" id="side_danjon" class="side_nav material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" style="top: 0px;right: 0px;">rocket</button>
+      <button onclick="page_nav(2)" id="side_premia" class="side_nav material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" style="top: 0px;right: 0px;">lightbulb</button>
+      <button onclick="page_nav(3)" id="side_set" class="side_nav material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" style="top: 0px;right: 0px;">memory</button>
       <button onclick="log_out()" class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" style="top: 0px;right: 0px;">logout</button>
       <!--
       <div class="mdc-drawer__header">
@@ -220,7 +221,37 @@
                 <p class="content_danjon">やることを小さくする</p>
               </div>
             </div>
+            <div id="" class="danjon-card mdc-card">
+              <div class="danjon_head">
+                <p class="danjon_goal">習慣化</p>
+                <p class="danjon_num">1人</p>
+              </div>
+              <div class="erea_danjon">
+                <p class="content_danjon">次にやりたくなる感情で作業を完了する</p>
+              </div>
+            </div>
+            <div id="" class="danjon-card mdc-card">
+              <div class="danjon_head">
+                <p class="danjon_goal">習慣化</p>
+                <p class="danjon_num">3人</p>
+              </div>
+              <div class="erea_danjon">
+                <p class="content_danjon">次にやることを決めておく</p>
+              </div>
+            </div>
+            <div id="" class="danjon-card mdc-card">
+              <div class="danjon_head">
+                <p class="danjon_goal">習慣化</p>
+                <p class="danjon_num">5人</p>
+              </div>
+              <div class="erea_danjon">
+                <p class="content_danjon">誰かと一緒にやる</p>
+              </div>
+            </div>
           </div>
+        </div>
+        <div id="premia_page" class="second_page" style="display: none;">
+          <h1>プレミア</h1>
         </div>
         <div id="set_page" class="second_page" style="display: none;">
           <h1>せってい</h1>
@@ -244,8 +275,19 @@
           
             <button class="mdc-tab" role="tab" aria-selected="false" tabindex="0">
               <span class="mdc-tab__content">
-                <span id="bab_icon_danjon" class="mdc-tab__icon material-icons bab_icon" aria-hidden="true">rocket_launch</span>
+                <span id="bab_icon_danjon" class="mdc-tab__icon material-icons bab_icon" aria-hidden="true">rocket</span>
                 <span id="bab_icon_danjon_text" class="footer_parts mdc-tab__text-label bab_icon">ダンジョン</span>
+              </span>
+              <span class="mdc-tab__ripple" hidden></span>
+              <span class="mdc-tab-indicator onfooter">
+                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+              </span>
+            </button>
+
+            <button class="mdc-tab" role="tab" aria-selected="false" tabindex="0">
+              <span class="mdc-tab__content">
+                <span id="bab_icon_premium" class="mdc-tab__icon material-icons bab_icon" aria-hidden="true">lightbulb</span>
+                <span id="bab_icon_premium_text" class="footer_parts mdc-tab__text-label bab_icon">プレミア</span>
               </span>
               <span class="mdc-tab__ripple" hidden></span>
               <span class="mdc-tab-indicator onfooter">
