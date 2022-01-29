@@ -206,3 +206,16 @@ html{
     font-size: 16px;
     margin: 0px 8px 10px 8px;
 }
+
+.tag-button{
+    margin: 8px;
+    border-radius: 18px;
+}.tag-button.active{
+    background-color: #494949;  
+}.tag-button.active > .tag_content{
+    color: #ffffff;
+}.tag-button.disactive{
+    background-color: #dddddd;  
+}.tag-button.disactive > .tag_content{
+    color: #000000;
+}

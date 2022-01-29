@@ -208,7 +208,19 @@
             <!--骨組み-->
           </div>
         </div>
-        <div id="danjon_page" class="second_page" style="display: none;">
+        <div id="danjon_page" class="second_page" style="display: none; flex-direction: column;">
+          <div class="tag_wrapper" style="display: flex;">
+            <button id="danjon_look" class="mdc-button tag-button active" onclick="tag_danjon(this)">
+              <span class="mdc-button__ripple"></span>
+              <i class="material-icons mdc-button__icon tag_content" aria-hidden="true">explore</i>
+              <span class="mdc-button__label tag_content">探索</span>
+            </button>
+            <button id="danjon_follow" class="mdc-button tag-button disactive" onclick="tag_danjon(this)">
+              <span class="mdc-button__ripple"></span>
+              <span class="mdc-button__label tag_content">フォロー</span>
+            </button>
+
+          </div>
           
           <div id="danjon_thread" class="on_scroll">
             <!--骨組み-->
@@ -250,6 +262,8 @@
             </div>
           </div>
         </div>
+
+
         <div id="premia_page" class="second_page" style="display: none;">
           <h1>プレミア</h1>
         </div>
@@ -316,4 +330,5 @@
   <script src="js/material.js"></script>
   <script src="js/login.js"></script>
   <script src="js/bottombar.js"></script>
+  <script src="js/navigation.js"></script>
 </html>
