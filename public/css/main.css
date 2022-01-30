@@ -210,6 +210,7 @@ html{
 .tag-button{
     margin: 8px;
     border-radius: 18px;
+    padding: 18px;
 }.tag-button.active{
     background-color: #494949;  
 }.tag-button.active > .tag_content{
