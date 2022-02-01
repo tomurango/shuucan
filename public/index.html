@@ -126,7 +126,21 @@
       </div>
       -->
       <div id="yes_user" class="top_level_page">
-        <div id="world_page" class="second_page">
+        <div id="world_page" class="second_page" style="display: flex; flex-direction: column;">
+          <div class="tag_wrapper" style="display: flex;">
+            <button id="world_look" class="mdc-button tag-button active" onclick="tag_world(this)">
+              <span class="mdc-button__ripple"></span>
+              <i class="material-icons mdc-button__icon tag_content" aria-hidden="true">explore</i>
+              <span class="mdc-button__label tag_content">探索</span>
+            </button>
+            <button id="world_follow" class="mdc-button tag-button disactive" onclick="tag_world(this)">
+              <span class="mdc-button__ripple"></span>
+              <span class="mdc-button__label tag_content">フォロー</span>
+            </button>
+
+          </div>
+
+
           <div id="world_thread" class="on_scroll">
             <!--骨組み-->
             <div id="" class="diary-card">
