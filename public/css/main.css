@@ -159,12 +159,6 @@ html{
     color: #777777;
 }
 
-#world_thread{
-    width: 100%;
-}#danjon_thread{
-    width: 100%;
-}
-
 .side_nav{
     color: #a4a4a4;
 }.side_nav.active{
@@ -223,7 +217,14 @@ html{
 
 
 #danjon_look_page{
-    display: block;
-}#danjon_follow_page{
     display: none;
+}#danjon_follow_page{
+    display: flex;
+}
+
+
+#world_look_page{
+    display: none;
+}#world_follow_page{
+    display: flex;
 }

@@ -128,20 +128,26 @@
       <div id="yes_user" class="top_level_page">
         <div id="world_page" class="second_page" style="display: flex; flex-direction: column;">
           <div class="tag_wrapper" style="display: flex;">
-            <button id="world_look" class="mdc-button tag-button active" onclick="tag_world(this)">
+            <button id="world_look" class="mdc-button tag-button disactive" onclick="tag_world(this)">
               <span class="mdc-button__ripple"></span>
               <i class="material-icons mdc-button__icon tag_content" aria-hidden="true">explore</i>
               <span class="mdc-button__label tag_content">探索</span>
             </button>
-            <button id="world_follow" class="mdc-button tag-button disactive" onclick="tag_world(this)">
+            <button id="world_follow" class="mdc-button tag-button active" onclick="tag_world(this)">
               <span class="mdc-button__ripple"></span>
               <span class="mdc-button__label tag_content">フォロー</span>
             </button>
 
           </div>
 
+          <div id="world_look_page" class="on_scroll">
+            <!--骨組み-->
+            <h1>探索</h1>
+            <h2>ユーザのUIをここに</h2>
+          </div>
 
-          <div id="world_thread" class="on_scroll">
+
+          <div id="world_follow_page" class="on_scroll">
             <!--骨組み-->
             <div id="" class="diary-card">
               <div class="header_erea">
@@ -156,82 +162,18 @@
                 <button class="material-icons mdc-icon-button good_diary" title="Good">thumb_up</button>
               </div>
             </div>
-            <div id="" class="diary-card">
-              <div class="header_erea">
-                <img class="who_icon" src="images/google_login_button/btn_google_signin_dark_focus_web@2x.png">
-                <p class="whos_diary">tanak</p>
-                <p class="what_time">3時間</p>
-              </div>
-              <div class="content_erea">
-                <p class="content_diary">あーそーめん</p>
-              </div>
-              <div class="footer_area">
-                <button class="material-icons mdc-icon-button good_diary" title="Good">thumb_up</button>
-              </div>
-            </div>
-            <div id="" class="diary-card">
-              <div class="header_erea">
-                <img class="who_icon" src="images/google_login_button/btn_google_signin_light_disabled_web@2x.png">
-                <p class="whos_diary">dddddaawek</p>
-                <p class="what_time">6時間</p>
-              </div>
-              <div class="content_erea">
-                <p class="content_diary">genshin impack</p>
-              </div>
-              <div class="footer_area">
-                <button class="material-icons mdc-icon-button good_diary" title="Good">thumb_up</button>
-              </div>
-            </div>
-            <div id="" class="diary-card">
-              <div class="header_erea">
-                <img class="who_icon" src="images/google_login_button/btn_google_signin_dark_focus_web@2x.png">
-                <p class="whos_diary">tanak</p>
-                <p class="what_time">12時間</p>
-              </div>
-              <div class="content_erea">
-                <p class="content_diary">画像載せれるようにしたいな</p>
-              </div>
-              <div class="footer_area">
-                <button class="material-icons mdc-icon-button good_diary" title="Good">thumb_up</button>
-              </div>
-            </div>
-            <div id="" class="diary-card">
-              <div class="header_erea">
-                <img class="who_icon" src="images/google_login_button/btn_google_signin_light_disabled_web@2x.png">
-                <p class="whos_diary">dddddaawek</p>
-                <p class="what_time">12日15日</p>
-              </div>
-              <div class="content_erea">
-                <p class="content_diary">草元素</p>
-              </div>
-              <div class="footer_area">
-                <button class="material-icons mdc-icon-button good_diary" title="Good">thumb_up</button>
-              </div>
-            </div>
-            <div id="" class="diary-card">
-              <div class="header_erea">
-                <img class="who_icon" src="images/shuucan.jpg">
-                <p class="whos_diary">tomura</p>
-                <p class="what_time">12月11日</p>
-              </div>
-              <div class="content_erea">
-                <p class="content_diary">ばおわ</p>
-              </div>
-              <div class="footer_area">
-                <button class="material-icons mdc-icon-button good_diary" title="Good">thumb_up</button>
-              </div>
-            </div>
+            
             <!--骨組み-->
           </div>
         </div>
         <div id="danjon_page" class="second_page" style="display: none; flex-direction: column;">
           <div class="tag_wrapper" style="display: flex;">
-            <button id="danjon_look" class="mdc-button tag-button active" onclick="tag_danjon(this)">
+            <button id="danjon_look" class="mdc-button tag-button disactive" onclick="tag_danjon(this)">
               <span class="mdc-button__ripple"></span>
               <i class="material-icons mdc-button__icon tag_content" aria-hidden="true">explore</i>
               <span class="mdc-button__label tag_content">探索</span>
             </button>
-            <button id="danjon_follow" class="mdc-button tag-button disactive" onclick="tag_danjon(this)">
+            <button id="danjon_follow" class="mdc-button tag-button active" onclick="tag_danjon(this)">
               <span class="mdc-button__ripple"></span>
               <span class="mdc-button__label tag_content">フォロー</span>
             </button>
