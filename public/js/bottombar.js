@@ -21,20 +21,28 @@ function page_nav(index){
         document.getElementById("world_page").style.display = "flex";
         //sideのactive
         document.getElementById("side_world").classList.add("active");
+        //headerの名前表示切替
+        document.getElementById("name_on_header").textContent="ワールド";
     }else if(index==1){
         //ダンジョンページ表示
         document.getElementById("danjon_page").style.display = "flex";
         //sideのactive
         document.getElementById("side_danjon").classList.add("active");
+        //headerの名前表示切替
+        document.getElementById("name_on_header").textContent="ダンジョン";
     }else if(index==2){
         //プレミアページ表示
         document.getElementById("premia_page").style.display = "flex";
         //sideのactive
         document.getElementById("side_premia").classList.add("active");
+        //headerの名前表示切替
+        document.getElementById("name_on_header").textContent="プレミア";
     }else if(index==3){
         //セッテイページ表示
         document.getElementById("set_page").style.display = "flex";
         //sideのactive
         document.getElementById("side_set").classList.add("active");
+        //headerの名前表示切替
+        document.getElementById("name_on_header").textContent="設定";
     }
 }
