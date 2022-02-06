@@ -85,6 +85,8 @@ html{
         position: relative;
         left: 120px;
         box-shadow: none;
+    }#card_container{
+        flex-direction: row;
     }
 }@media screen and (max-width:599px){
     .top_level_page{
@@ -93,6 +95,8 @@ html{
         display: block;
     }#nav_pc{
         display: none;
+    }#card-container{
+        flex-direction: column;
     }
 }.top_level_page{
     width: 100%;
@@ -218,6 +222,7 @@ html{
 
 #danjon_look_page{
     display: none;
+    flex-direction: column;
 }#danjon_follow_page{
     display: flex;
 }
@@ -227,4 +232,16 @@ html{
     display: none;
 }#world_follow_page{
     display: flex;
+}
+
+#sample_membars_media{
+    background-image: url(../images/samples/habitfrom_photoac_22007903_s.jpg);
+}
+
+#card-container{
+    display: flex;
+    gap: 8px;
+    padding: 8px;
+}.danjon_name{
+    margin: 0px;
 }

@@ -5,7 +5,7 @@ function tag_danjon(element){
             element.classList.toggle("disactive");
             document.getElementById("danjon_follow").classList.toggle("active");
             document.getElementById("danjon_follow").classList.toggle("disactive");
-            document.getElementById("danjon_look_page").style.display = "block";
+            document.getElementById("danjon_look_page").style.display = "flex";
             document.getElementById("danjon_follow_page").style.display = "none";
         }else if(element.id == "danjon_follow"){
             element.classList.toggle("active");
