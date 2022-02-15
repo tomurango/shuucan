@@ -224,7 +224,7 @@ html{
     display: none;
     flex-direction: column;
 }#danjon_follow_page{
-    display: flex;
+    display: block;
 }
 
 
@@ -250,4 +250,12 @@ html{
     margin: 0px;
 }.team_info_container{
     padding: 16px;
+}
+
+#dan_no_board_image{
+    background-image: url(../images/follow_danjon.jpg);
+}#dan_no_board_image::before {
+    display: block;
+    content: " ";
+    margin-top: 100%;
 }
