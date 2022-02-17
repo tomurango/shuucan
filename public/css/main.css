@@ -259,3 +259,18 @@ html{
     content: " ";
     margin-top: 100%;
 }
+
+#searchwordarea{
+    display: flex;
+}#search_user_icon{
+    font-size: 48px;
+    margin: 16px 0px 16px 16px;
+    display: inline-block;
+    color: #757575;
+}#search_user_input{
+    font-size: 20px;
+    margin: 16px 16px 16px 0px;
+    padding: 0px 0px 0px 16px;
+    border: none;
+    display: inline-block;
+}
