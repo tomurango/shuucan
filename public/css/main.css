@@ -274,3 +274,26 @@ html{
     border: none;
     display: inline-block;
 }
+
+#challen_list{
+    display: flex;
+    flex-direction: column;
+}.a_user_div{
+    position: relative;
+}.a_user_icon{
+    position: absolute;
+    height: 48px;
+    width: 48px;
+    top: 16px;
+    left: 16px;
+}.a_user_name{
+    position: relative;
+    left: 80px;
+    font-size: 0.8em;
+    color: #777777;
+    margin-bottom: 0px;
+}.a_user_prof{
+    position: relative;
+    left: 80px;
+    margin-top: 0px;
+}
