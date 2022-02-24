@@ -297,3 +297,12 @@ html{
     left: 80px;
     margin-top: 0px;
 }
+
+
+#need_premia_image{
+    background-image: url(../images/needmoney.jpg);
+}#need_premia_image::before {
+    display: block;
+    content: " ";
+    margin-top: 100%;
+}
