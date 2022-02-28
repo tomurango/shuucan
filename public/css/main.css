@@ -306,3 +306,8 @@ html{
     content: " ";
     margin-top: 100%;
 }
+
+.set-icons{
+    position: relative;
+    top: 4px;
+}
