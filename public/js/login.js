@@ -113,3 +113,7 @@ function signed_intab(userinfo){
     document.getElementById("login_button").style.display = "none";
 }
 
+//ユーザ登録を初めてのログインで行うための関数
+function define_user_data(){
+    
+}
