@@ -1,4 +1,5 @@
 var global_user;
+var global_user_database;
 
 function login_card_display(){
     //ログインのためのカードを出してくる
@@ -73,6 +74,7 @@ $(document).ready(function(){
             firebase.auth().onAuthStateChanged(function(user) {
                 if (user) {
                     // User is signed in.
+                    global_user = user;
                     console.log("User is signed in");
                     signedin_collect(user);
                 } else {
@@ -99,8 +101,9 @@ $(document).ready(function(){
 
 //mainタグ内の表示を変える
 function signedin_collect(userinfo){
-    //document.getElementById("non_user").style.display = "none";
-    //document.getElementById("yes_user").style.display = "block";
+    //global変数にdb取ってくる若しくは新規登録
+    define_user_data(userinfo.uid)
+    //tabの見た目を変える
     signed_intab(userinfo);
     //ログインカード内のボタンを表示する
     document.getElementById("logout_button").style.display = "block";
@@ -113,7 +116,32 @@ function signed_intab(userinfo){
     document.getElementById("login_button").style.display = "none";
 }
 
-//ユーザ登録を初めてのログインで行うための関数
-function define_user_data(){
-    
+//ユーザ登録を初めてのログインで行うための関数 tamesu
+function define_user_data(uid){
+    firebase.firestore().collection("users").doc(uid).get().then(function(doc){
+        //データが未定義の時（初めての取得の時）
+        if(doc.data() == undefined){
+            //利用規約を表示する
+            //use_terms_dialog.open();
+            //20210816 tutorialのためのフラグ起動
+            //tutorial_flag = true;
+            //20210210 Good Gift の初期化の追加
+            var name = global_user.displayName;
+            var icon = global_user.photoURL;
+            var regist_doc = {   
+                name: name,   
+                icon: icon,
+                prof: '',
+                //Gift: []
+            }
+            firebase.firestore().collection("users").doc(uid).set(regist_doc).then(function(){
+                global_user_database = regist_doc;
+            });
+        }else{
+            global_user_database = doc.data();
+
+        }
+    }).catch(function(error){
+        console.log("error", error);
+    });
 }
