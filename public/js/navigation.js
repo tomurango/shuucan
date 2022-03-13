@@ -43,3 +43,9 @@ function tag_world(element){
         return ;
     }
 }
+
+//ダンジョンの探索を押したときにdungeonのデータを取ってきてそうにゅうする流れを執り行う関数
+function dungeon_look(){
+    console.log("dungeon のデータを取ってくる");
+    console.log("dungeon のデータを挿入する");
+}
