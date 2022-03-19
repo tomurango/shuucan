@@ -175,21 +175,16 @@
           <div id="danjon_look_page" class="on_scroll">
             <!--骨組み-->
             <div id="card-container">
-              <div class="mdc-card danjon_card">
-                <div id="sample_membars_media" class="mdc-card__media mdc-card__media--16-9 team_image">
-                  <!--
-                  <img class="member_image" src="images/membar_icons/amber.jpg">
-                  <img class="member_image" src="images/membar_icons/amber.jpg">
-                  <img class="member_image" src="images/membar_icons/amber.jpg">
-                  <img class="member_image" src="images/membar_icons/amber.jpg">
-                -->
+              <div id="" class="mdc-card danjon_card" onclick="dungeon_detail(this)">
+                <div id="" class="mdc-card__media mdc-card__media--16-9 sample_membars_media">
                 </div>
                 <div class="mdc-card__content team_info_container">
                   <p class="danjon_name">ダンジョン名</p>
                   <p class="danjon_first">１ 目標を小さくする</p>
                 </div>
-                
               </div>
+              
+
             </div>
           </div>
 
@@ -249,6 +244,7 @@
         </div>
       </div>
     </main>
+
     <div id="bottom_app_bar" class="mdc-tab-bar" role="tablist">
       <div class="mdc-tab-scroller">
         <div class="mdc-tab-scroller__scroll-area">
@@ -300,20 +296,26 @@
         </div>
       </div>
     </div>
+
+    <!--dialog 関連-->
+
   </body>
   
   <!-- update the version number as needed -->
   <script defer src="/__/firebase/9.6.0/firebase-app-compat.js"></script>
   <!-- include only the Firebase features as you need -->
   <script defer src="/__/firebase/9.6.0/firebase-auth-compat.js"></script>
-  <script defer src="/__/firebase/9.6.0/firebase-database-compat.js"></script>
   <script defer src="/__/firebase/9.6.0/firebase-firestore-compat.js"></script>
+  <script defer src="/__/firebase/9.6.0/firebase-storage-compat.js"></script>
+  
+  <!--
+  <script defer src="/__/firebase/9.6.0/firebase-database-compat.js"></script>
   <script defer src="/__/firebase/9.6.0/firebase-functions-compat.js"></script>
   <script defer src="/__/firebase/9.6.0/firebase-messaging-compat.js"></script>
-  <script defer src="/__/firebase/9.6.0/firebase-storage-compat.js"></script>
   <script defer src="/__/firebase/9.6.0/firebase-analytics-compat.js"></script>
   <script defer src="/__/firebase/9.6.0/firebase-remote-config-compat.js"></script>
   <script defer src="/__/firebase/9.6.0/firebase-performance-compat.js"></script>
+  -->
   <!-- 
     initialize the SDK after all desired features are loaded, set useEmulator to false
     to avoid connecting the SDK to running emulators.

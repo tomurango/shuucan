@@ -79,9 +79,9 @@ html{
     }#main_area{
         left: 120px;
         position: relative;
-        width: 500px;
+        width: 480px;
     }#top_header{
-        width: 500px;
+        width: 480px;
         position: relative;
         left: 120px;
         box-shadow: none;
@@ -234,7 +234,7 @@ html{
     display: flex;
 }
 
-#sample_membars_media{
+.sample_membars_media{
     background-image: url(../images/samples/habitfrom_photoac_22007903_s.jpg);
 }
 

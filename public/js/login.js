@@ -123,16 +123,12 @@ function define_user_data(uid){
         if(doc.data() == undefined){
             //利用規約を表示する
             //use_terms_dialog.open();
-            //20210816 tutorialのためのフラグ起動
-            //tutorial_flag = true;
-            //20210210 Good Gift の初期化の追加
             var name = global_user.displayName;
             var icon = global_user.photoURL;
             var regist_doc = {   
                 name: name,   
                 icon: icon,
                 prof: '',
-                //Gift: []
             }
             firebase.firestore().collection("users").doc(uid).set(regist_doc).then(function(){
                 global_user_database = regist_doc;
