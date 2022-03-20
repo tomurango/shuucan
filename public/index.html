@@ -37,6 +37,12 @@
         <span class="mdc-button__label">ログアウト</span>
       </button>
     </div>
+    <!--ダンジョンの詳細を見るためのdiv-->
+    <div id="dungeon_detail_div" style="display: none; position: fixed; height: 100%; width: 100%; left: 0px; text-align: center;z-index: 5;top: 0px;background-color: #ffffff;">
+      <!--戻るボタン-->
+      <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" style="position: absolute; top: 0px;left: 0px" onclick="dungeon_detail_back()">clear</button>
+      <p>ここにダンジョンの詳細を表示</p>
+    </div>
 
     <header id="top_header" class="mdc-top-app-bar">
       <div class="mdc-top-app-bar__row">

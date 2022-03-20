@@ -47,6 +47,7 @@ function tag_world(element){
 }
 
 /* 同じダンジョンを繰り返し取得しないように書き換える */
+//とりあえず一度だけ取得する考えで記述
 //ダンジョンの探索を押したときにdungeonのデータを取ってきてそうにゅうする流れを執り行う関数
 function dungeon_look(){
     console.log("dungeon のデータを取ってくる");
@@ -64,6 +65,11 @@ function dungeon_look(){
 }
 
 function dungeon_detail(dungeon_ele){
-    //
-    console.log();
+    //divを表示
+    document.getElementById("dungeon_detail_div").style.display = "block";
+    console.log(dungeon_ele.id);
+}
+function dungeon_detail_back(){
+    //divを非表示
+    document.getElementById("dungeon_detail_div").style.display = "none";
 }
