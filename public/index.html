@@ -37,11 +37,25 @@
         <span class="mdc-button__label">ログアウト</span>
       </button>
     </div>
+
     <!--ダンジョンの詳細を見るためのdiv-->
     <div id="dungeon_detail_div" style="display: none; position: fixed; height: 100%; width: 100%; left: 0px; text-align: center;z-index: 5;top: 0px;background-color: #ffffff;">
       <!--戻るボタン-->
       <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" style="position: absolute; top: 0px;left: 0px" onclick="dungeon_detail_back()">clear</button>
-      <p>ここにダンジョンの詳細を表示</p>
+      <p style="position: absolute; top: 0px; left: 48px; margin: 12px 0px;">
+        <span id="dungeon_name_indetail">ダンジョン</span>の詳細
+      </p>
+      <!--scroll area-->
+      <div>
+        <img id="dungeon_image_indetail">
+        <div id="dungeon_userinfo_indetail">
+          <img id="dungeon_userimg_indetail">
+          <p id="dungeon_username_indetail">とむらです</p>
+          <p id="dungeon_userexp_indetail">原神をこよなく愛し、朝の５時に起床している男</p>
+        </div>
+        <div id="dungeon_work_indetail"></div>
+      </div>
+      
     </div>
 
     <header id="top_header" class="mdc-top-app-bar">

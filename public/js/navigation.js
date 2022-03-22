@@ -48,20 +48,27 @@ function tag_world(element){
 
 /* 同じダンジョンを繰り返し取得しないように書き換える */
 //とりあえず一度だけ取得する考えで記述
+var get_flag = true;
 //ダンジョンの探索を押したときにdungeonのデータを取ってきてそうにゅうする流れを執り行う関数
 function dungeon_look(){
-    console.log("dungeon のデータを取ってくる");
-    firebase.firestore().collection("dungeons").limit(10).get().then(function(dungeons){
-        //loop
-        console.log("dungeons 数", dungeons.size);
-        dungeons.forEach(function(dungeon){
-            //完了タスクとそうじゃないタスクに振り分ける
-            console.log(dungeon.data(), dungeon.id);
+    if(get_flag){
+        firebase.firestore().collection("dungeons").limit(10).get().then(function(dungeons){
+            get_flag = false;
+            //loop
+            console.log("dungeons 数", dungeons.size);
+            dungeons.forEach(function(dungeon){
+                //完了タスクとそうじゃないタスクに振り分ける
+                console.log(dungeon.data(), dungeon.id);
+            });
+        }).catch(function(error){
+            console.log("error", error);
         });
-    }).catch(function(error){
-        console.log("error", error);
-    });
-    console.log("dungeon のデータを挿入する");
+    }else{
+        //console.log()
+        return 
+    }
+    //console.log("dungeon のデータを取ってくる");
+    //console.log("dungeon のデータを挿入する");
 }
 
 function dungeon_detail(dungeon_ele){
