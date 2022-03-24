@@ -20,6 +20,7 @@
 
     
     <link href="css/main.css" rel="stylesheet">
+    <link href="css/dungeondetail.css" rel="stylesheet">
   </head>
   <body>
     <div id="login_card_div" style="display: none; position: fixed; height: 100%; width: 100%; left: 0px; text-align: center;z-index: 5;top: 0px;background-color: #ffffff;">
@@ -46,14 +47,18 @@
         <span id="dungeon_name_indetail">ダンジョン</span>の詳細
       </p>
       <!--scroll area-->
-      <div>
-        <img id="dungeon_image_indetail">
+      <div id="dungeon_main_indetail">
+        <div id="dungeon_image_indetail"></div>
+        <div id="dungeon_txt_indetail">
+          <p>ダンジョンの名前</p>
+          <p>ダンジョンの説明文</p>
+        </div>
         <div id="dungeon_userinfo_indetail">
-          <img id="dungeon_userimg_indetail">
+          <img id="dungeon_userimg_indetail" width="48px" height="48px" src="images/samples/kkrn_icons_33_usericon_sample/kkrn_icon_user_1.png">
           <p id="dungeon_username_indetail">とむらです</p>
           <p id="dungeon_userexp_indetail">原神をこよなく愛し、朝の５時に起床している男</p>
         </div>
-        <div id="dungeon_work_indetail"></div>
+        <div id="dungeon_work_indetail">ここにワークが挿入されていく</div>
       </div>
       
     </div>

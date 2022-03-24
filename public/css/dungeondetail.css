@@ -1,0 +1,24 @@
+#dungeon_main_indetail{
+    top: 48px;
+    height: calc(100vh - 48px);
+    overflow-y: scroll;
+    position: relative;
+    text-align: left;
+}
+#dungeon_image_indetail{
+    position: relative;
+    width: 100%;
+    background-image: url(../images/samples/habitfrom_photoac_22007903_s.jpg);
+    background-size: cover;
+}#dungeon_image_indetail::before {
+    display: block;
+    content: " ";
+    padding-top: 25%;
+}
+#dungeon_txt_indetail{
+    padding-left: 16px;
+}#dungeon_userinfo_indetail{
+    padding-left: 16px;
+}#dungeon_work_indetail{
+    padding-left: 16px;
+}
