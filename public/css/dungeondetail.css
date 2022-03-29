@@ -2,6 +2,7 @@
     top: 48px;
     height: calc(100vh - 48px);
     overflow-y: scroll;
+    overflow-x: hidden;
     position: relative;
     text-align: left;
 }
@@ -13,12 +14,36 @@
 }#dungeon_image_indetail::before {
     display: block;
     content: " ";
-    padding-top: 25%;
+    padding-top: 56.25%;
 }
 #dungeon_txt_indetail{
     padding-left: 16px;
 }#dungeon_userinfo_indetail{
     padding-left: 16px;
+    margin: 16px 0px;
 }#dungeon_work_indetail{
     padding-left: 16px;
+}
+#dungeon_name_indetail{
+    font-weight: bold;
+    font-size: 2em;
+    margin: 0px;
+}#dungeon_exp_indetail{
+    margin: 0px;
+}
+
+#dungeon_userimg_indetail{
+    position: absolute;
+}#dungeon_username_indetail{
+    position: relative;
+    left: 64px;
+    margin: 0px;
+    font-size: 1.2em;
+    font-weight: bold;
+}#dungeon_userexp_indetail{
+    position: relative;
+    left: 64px;
+    margin: 0px;
+    font-size: 0.8em;
+    color: #777777;
 }
