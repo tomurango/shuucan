@@ -5,6 +5,8 @@ tabBar.listen('MDCTabBar:activated',function(event){
 });
 
 function page_nav(index){
+    //pcの場合にdialogを表示している時非表示にするための記述
+    document.getElementById("dungeon_detail_div").style.display = "none";
     //一回全部を非表示にする
     var top_level_pages = document.getElementsByClassName('second_page');
     for (var i=0, len=top_level_pages.length|0; i<len; i=i+1|0) {

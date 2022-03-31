@@ -47,3 +47,24 @@
     font-size: 0.8em;
     color: #777777;
 }
+
+
+#dungeon_detail_div{
+    position: absolute;
+    height: 100%;
+    text-align: center;
+    z-index: 5;
+    top: 0px;
+    background-color: #ffffff;
+}
+@media screen and (min-width:600px){
+    #dungeon_detail_div{
+        left: 120px;
+        width: 480px;
+    }
+}@media screen and (max-width:599px){
+    #dungeon_detail_div{
+        width: 100%;
+        left: 0px;
+    }
+}
