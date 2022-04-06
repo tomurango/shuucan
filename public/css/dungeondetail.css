@@ -23,11 +23,12 @@
     margin: 16px 0px;
 }#dungeon_work_indetail{
     padding-left: 16px;
+    margin-bottom: 16px;
 }
 #dungeon_name_indetail{
     font-weight: bold;
     font-size: 2em;
-    margin: 0px;
+    margin: 16px 0px 0px 0px;
 }#dungeon_exp_indetail{
     margin: 0px;
 }
