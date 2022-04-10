@@ -21,6 +21,7 @@
     
     <link href="css/main.css" rel="stylesheet">
     <link href="css/dungeondetail.css" rel="stylesheet">
+    <link href="css/dungeonpage.css" rel="stylesheet">
   </head>
   <body>
     <div id="login_card_div" style="display: none; position: fixed; height: 100%; width: 100%; left: 0px; text-align: center;z-index: 5;top: 0px;background-color: #ffffff;">
@@ -75,7 +76,7 @@
             <span class="mdc-button__label">ログイン</span>
           </button>
 
-          <span id="name_on_header" class="mdc-top-app-bar__title">ワールド</span>
+          <span id="name_on_header" class="mdc-top-app-bar__title">ダンジョン</span>
           
         </section>
         <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
@@ -105,10 +106,13 @@
     <aside id="nav_pc">
       
       <button style="background-color:#ffffff; height:48px; width:48px; padding:0px; overflow: hidden; border:none; border-radius: 50%; position:relative;"><img width="48" height="48" alt="Your Icon" src="images/shuucan.jpg" onerror="this.src='/images/nanikaerror.jpg'" ></button>
-      <button onclick="page_nav(0)" id="side_world" class="side_nav active material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" style="top: 0px;right: 0px;">public</button>
-      <button onclick="page_nav(1)" id="side_danjon" class="side_nav material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" style="top: 0px;right: 0px;">rocket</button>
-      <button onclick="page_nav(2)" id="side_premia" class="side_nav material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" style="top: 0px;right: 0px;">lightbulb</button>
-      <button onclick="page_nav(3)" id="side_set" class="side_nav material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" style="top: 0px;right: 0px;">memory</button>
+      <!--
+        <button onclick="page_nav(0)" id="side_world" class="side_nav active material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" style="top: 0px;right: 0px;">public</button>
+
+      -->
+      <button onclick="tabBar.activateTab(0)" id="side_danjon" class="side_nav material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" style="top: 0px;right: 0px;">rocket</button>
+      <button onclick="tabBar.activateTab(1)" id="side_premia" class="side_nav material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" style="top: 0px;right: 0px;">lightbulb</button>
+      <button onclick="tabBar.activateTab(2)" id="side_set" class="side_nav material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" style="top: 0px;right: 0px;">memory</button>
       <button onclick="log_out()" class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" style="top: 0px;right: 0px;">logout</button>
       <!--
       <div class="mdc-drawer__header">
@@ -134,7 +138,7 @@
       </div>
       -->
       <div id="yes_user" class="top_level_page">
-        <div id="world_page" class="second_page" style="display: flex; flex-direction: column;">
+        <div id="world_page" class="second_page" style="display: none; flex-direction: column;">
           <div class="tag_wrapper" style="display: flex;">
             <button id="world_look" class="mdc-button tag-button disactive" onclick="tag_world(this)">
               <span class="mdc-button__ripple"></span>
@@ -183,7 +187,8 @@
             <!--骨組み-->
           </div>
         </div>
-        <div id="danjon_page" class="second_page" style="display: none; flex-direction: column;">
+
+        <div id="danjon_page" class="second_page" style="display: flex; flex-direction: column;">
           <div class="tag_wrapper" style="display: flex;">
             <button id="danjon_look" class="mdc-button tag-button disactive" onclick="tag_danjon(this)">
               <span class="mdc-button__ripple"></span>
@@ -216,13 +221,15 @@
           <div id="danjon_follow_page" class="on_scroll">
             <!--骨組み-->
             <div id="danjon_board">
-              <div id="have_follow_dan" style="display: none;">
-                <div id="fol_dan_icons"></div>
+              <div id="have_follow_dan" style="display: block;">
+                <div id="fol_dan_icons">
+                  <button id="test_dan_icon" class="fol_dan_icon"><img id="test_dan_icon_img" src="images/samples/habitfrom_photoac_22007903_s.jpg" width="48" height="48" alt="Your Icon" onerror="this.src='/images/nanikaerror.jpg'" ></button>
+                </div>
                 <div id="fol_dan_thread"></div>
                 <p>ダンジョンフォローしてるよ！</p>
               </div>
 
-              <div id="danjon_no_choice" style="display: block; height: 100%; width: 100%; left: 0px; text-align: center;">
+              <div id="danjon_no_choice" style="display: none; height: 100%; width: 100%; left: 0px; text-align: center;">
                 <div id="dan_no_board_image" style="display: inline-block; background-size: contain;background-repeat: no-repeat;background-position: center center; width: 60%; max-width: 300px; margin-top: 50px;"></div>
                 <div>
                   <p class="text_up">情報が取得できませんでした</p>
@@ -280,18 +287,21 @@
       <div class="mdc-tab-scroller">
         <div class="mdc-tab-scroller__scroll-area">
           <div class="mdc-tab-scroller__scroll-content">
-            <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
-              <span class="mdc-tab__content">
-                <span id="bab_icon_world" class="mdc-tab__icon material-icons bab_icon using" aria-hidden="true">public</span>
-                <span id="bab_icon_world_text" class="footer_parts mdc-tab__text-label bab_icon using">ワールド</span>
-              </span>
-              <span class="mdc-tab-indicator mdc-tab-indicator--active onfooter">
-                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-              </span>
-              <span class="mdc-tab__ripple" hidden></span>
-            </button>
+            <!--
+              <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
+                <span class="mdc-tab__content">
+                  <span id="bab_icon_world" class="mdc-tab__icon material-icons bab_icon using" aria-hidden="true">public</span>
+                  <span id="bab_icon_world_text" class="footer_parts mdc-tab__text-label bab_icon using">ワールド</span>
+                </span>
+                <span class="mdc-tab-indicator mdc-tab-indicator--active onfooter">
+                  <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                </span>
+                <span class="mdc-tab__ripple" hidden></span>
+              </button>
+
+            -->
           
-            <button class="mdc-tab" role="tab" aria-selected="false" tabindex="0">
+            <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="false" tabindex="0">
               <span class="mdc-tab__content">
                 <span id="bab_icon_danjon" class="mdc-tab__icon material-icons bab_icon" aria-hidden="true">rocket</span>
                 <span id="bab_icon_danjon_text" class="footer_parts mdc-tab__text-label bab_icon">ダンジョン</span>

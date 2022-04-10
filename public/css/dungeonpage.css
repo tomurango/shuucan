@@ -1,0 +1,15 @@
+#test_dan_icon{
+
+}#test_dan_icon_img{
+    object-fit: cover;
+}
+.fol_dan_icon{
+    background-color:#ffffff;
+    height:48px;
+    width:48px;
+    padding:0px;
+    overflow: hidden;
+    border:none;
+    margin: 12px;
+    border-radius: 12px;
+}
