@@ -1,15 +1,35 @@
-#test_dan_icon{
-
-}#test_dan_icon_img{
-    object-fit: cover;
+.icontainer{
+    display: flex;
+    flex-direction: column;
 }
-.fol_dan_icon{
+#fol_dan_icons{
+    display: flex;
+    flex-direction: row;
+}.fol_dan_icon{
+    object-fit: cover;
     background-color:#ffffff;
-    height:48px;
-    width:48px;
+    height:64px;
+    width:64px;
     padding:0px;
     overflow: hidden;
     border:none;
+    margin: 12px;
+    border-radius: 12px;
+}.dan_icon_text{
+    overflow: hidden;
+    max-width: 64px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0px 12px;
+    font-size: 0.8em;
+    color: #999999;
+    text-align: center;
+}
+#fol_dan_all{
+    width: 64px;
+    height: 64px;
+    padding: 0px;
+    border: solid 1px;
     margin: 12px;
     border-radius: 12px;
 }
