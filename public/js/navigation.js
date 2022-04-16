@@ -80,3 +80,17 @@ function dungeon_detail_back(){
     //divを非表示
     document.getElementById("dungeon_detail_div").style.display = "none";
 }
+
+function dungeon_follow(ele){
+    //すべてのfoldan_btnをdisactiveにする
+
+    var ele_id = ele.id;
+    console.log(ele_id);
+    //選択したfoldan_btnをactiveにする
+
+    if(ele_id == "fol_dan_all"){
+        console.log("display all followed !");
+    }else{
+        console.log("display choised");
+    }
+}

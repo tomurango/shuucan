@@ -33,3 +33,7 @@
     margin: 12px;
     border-radius: 12px;
 }
+
+.foldan_btn .active{
+    border: solid 6px #c68400;
+}
