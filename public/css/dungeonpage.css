@@ -6,6 +6,7 @@
     display: flex;
     flex-direction: row;
 }.fol_dan_icon{
+    position: relative;
     object-fit: cover;
     background-color:#ffffff;
     height:64px;
@@ -24,6 +25,13 @@
     font-size: 0.8em;
     color: #999999;
     text-align: center;
+}.dan_icon_img{
+    position: relative;
+    top: 0px;
+}.active .dan_icon_img{
+    position: relative;
+    top: -6px;
+    left: -6px;
 }
 #fol_dan_all{
     width: 64px;
@@ -35,5 +43,6 @@
 }
 
 .foldan_btn.active{
-    border: solid 6px #c68400;
+    /* important ごりおしわらう */
+    border: solid 6px #c68400 !important ;
 }
