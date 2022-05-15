@@ -95,7 +95,7 @@ html{
         display: block;
     }#nav_pc{
         display: none;
-    }#card-container{
+    }#dnj-card-container{
         flex-direction: column;
     }
 }.top_level_page{
@@ -238,7 +238,7 @@ html{
     background-image: url(../images/samples/habitfrom_photoac_22007903_s.jpg);
 }
 
-#card-container{
+#dnj-card-container{
     display: flex;
     gap: 8px;
     padding: 8px;

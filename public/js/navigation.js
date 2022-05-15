@@ -76,6 +76,11 @@ function dungeon_detail(dungeon_ele){
     //divを表示
     document.getElementById("dungeon_detail_div").style.display = "block";
     console.log(dungeon_ele.id);
+    
+    var dnj_id = dungeon_ele.id.split('_')[0];
+    console.log(dnj_id); 
+
+    //恐らくglobal変数からダンジョンの情報を持ってきて、挿入とかする感じでいいとおもう
 }
 function dungeon_detail_back(){
     //divを非表示
