@@ -79,9 +79,11 @@ html{
     }#main_area{
         left: 120px;
         position: relative;
-        width: 480px;
+        width: calc(100% - 300px);
+        min-width: 480px;
     }#top_header{
-        width: 480px;
+        width: calc(100% - 300px);
+        min-width: 480px;
         position: relative;
         left: 120px;
         box-shadow: none;
