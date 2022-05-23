@@ -61,7 +61,8 @@
 @media screen and (min-width:600px){
     #dungeon_detail_div{
         left: 120px;
-        width: 480px;
+        width: calc(100% - 500px);
+        min-width: 480px;
     }
 }@media screen and (max-width:599px){
     #dungeon_detail_div{

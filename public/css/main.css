@@ -79,10 +79,10 @@ html{
     }#main_area{
         left: 120px;
         position: relative;
-        width: calc(100% - 300px);
+        width: calc(100% - 500px);
         min-width: 480px;
     }#top_header{
-        width: calc(100% - 300px);
+        width: calc(100% - 500px);
         min-width: 480px;
         position: relative;
         left: 120px;
