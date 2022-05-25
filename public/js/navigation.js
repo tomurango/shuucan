@@ -60,6 +60,8 @@ function dungeon_look(){
                 //ダンジョンごとに挿入していく
                 //console.log(dungeon, dungeon.data(), dungeon.id);
                 insert_dungeon(dungeon.data(), dungeon.id);
+                //global変数にも代入していく
+                global_dungeons[dungeon.id] = dungeon.data();
             });
         }).catch(function(error){
             console.log("error", error);
@@ -81,6 +83,11 @@ function dungeon_detail(dungeon_ele){
     console.log(dnj_id); 
 
     //恐らくglobal変数からダンジョンの情報を持ってきて、挿入とかする感じでいいとおもう
+    //document.getElementById("dungeon_image_indetail")
+    console.log(global_dungeons[dnj_id].imageURL);
+    $("#dungeon_image_indetail").css({
+        backgroundImage: 'url("'+ global_dungeons[dnj_id].imageURL +'")' // "" で括っていないとIEでは表示されない
+    });
 }
 function dungeon_detail_back(){
     //divを非表示

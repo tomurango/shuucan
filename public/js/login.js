@@ -1,5 +1,6 @@
 var global_user;
 var global_user_database;
+var global_dungeons = {};
 
 function login_card_display(){
     //ログインのためのカードを出してくる
